@@ -10,6 +10,10 @@ sudo pacman -S git tmux doppler pass stow
 sudo pacman -S pipewire wireplumber pipewire-audio pipewire-pulse
 echo ""
 
+echo "Installing Keeper Password manager"
+yay pacman -S keeper-password-manager
+echo ""
+
 echo "Installing Nvim"
 sudo pacman -S nvim
 git clone https://github.com/MDietermann/NvimConfig.git ~/git-clones/nvim
