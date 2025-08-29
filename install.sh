@@ -9,8 +9,7 @@ mkdir ~/git-clones/
 echo "-------------------------"
 
 echo "Installing basics"
-sudo pacman -S git tmux doppler pass stow
-sudo pacman -S pipewire wireplumber pipewire-audio pipewire-pulse
+sudo pacman -S --noconfirm base-devel git tmux doppler pass stow pipewire wireplumber pipewire-audio pipewire-pulse sudo
 echo "-------------------------"
 
 echo "Loading needed Git Repositories"
@@ -24,7 +23,6 @@ echo "-------------------------"
 
 echo "Installing yay"
 cd ~/git-clones/yay-bin
-sudo pacman -S base-devel
 makepkg -si
 cd ~
 echo "-------------------------"
@@ -52,7 +50,7 @@ echo "Installing Grub Theme"
 cd ~/git-clones/grubby-terminal
 chmod -x install.sh
 sudo sh install.sh
-sudo grub-mkconfig
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo "-------------------------"
 
 echo "All done!"
